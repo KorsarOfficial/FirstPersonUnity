@@ -1,0 +1,10 @@
+Note If you do not want to make a mistake, then I highly recommend sticking to the exact execution of tasks to avoid compilation errors. See the screenshots.
+
+1. Move the FPSmove.cs script to the model of the object you are going to control (in my case, it is a capsule), set it a collider so that it does not fall through the textures.
+the script describes which line is responsible for what if you suddenly want to change something.
+
+2. Move the FPScamera.cs script to the camera and move it to the player model.
+
+3. Create a Ground tag and move the tag to the floor, walls, etc
+
+4. Test it. You should be able to do it. If you have an error, then you should review the screenshots and re-read the information.
