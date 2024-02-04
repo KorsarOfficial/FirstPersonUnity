@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class FPScamera : MonoBehaviour
 {
-    private float mouseX; // Перемещение мыши по оси Х \\ Moving the mouse along the X axis
-    private float mouseY; // Перемещение мыши по оси Y \\ Moving the mouse along the Y axis
+    private float mouseX; // Bewegen der Maus entlang der x-Achse
+    private float mouseY; // Bewegen der Maus entlang der Y-Achse
 
-    [Header("Чувствительность мыши")]
-    public float sensivityMouse = 200f; // mouse speed
+    [Header("Г—ГіГўГ±ГІГўГЁГІГҐГ«ГјГ­Г®Г±ГІГј Г¬Г»ГёГЁ")]
+    public float sensivityMouse = 200f; // mausgeschwindigkeit
 
     public Transform Player;
  
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // Убрать курсор с камеры \\ Remove the cursor from the camera
+        Cursor.lockState = CursorLockMode.Locked; // Entfernen Sie den Cursor von der Kamera
     }
 
 
@@ -23,8 +23,8 @@ public class FPScamera : MonoBehaviour
         mouseX = Input.GetAxis("Mouse X") * sensivityMouse * Time.deltaTime;
         mouseY= Input.GetAxis("Mouse Y") * sensivityMouse * Time.deltaTime;
 
-        Player.Rotate(mouseX * new Vector3(0, 1, 0)); // Поворот камеры ось Х \\ Camera rotation X axis
+        Player.Rotate(mouseX * new Vector3(0, 1, 0)); // Kameradrehung X-Achse
 
-        transform.Rotate(-mouseY * new Vector3(1, 0, 0)); // Поворот камеры ось Y \\ Camera rotation Y axis
+        transform.Rotate(-mouseY * new Vector3(1, 0, 0)); // Kameradrehung Y-Achse
     }
 }
