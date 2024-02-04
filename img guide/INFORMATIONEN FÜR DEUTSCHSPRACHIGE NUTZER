@@ -1,1 +1,10 @@
+Hinweis Wenn Sie keinen Fehler machen möchten, empfehle ich dringend, sich an die genaue Ausführung von Aufgaben zu halten, um Kompilierungsfehler zu vermeiden. Siehe die Screenshots.
 
+1. Bewegen Sie den FPSmove.cs-Skript für das Modell des Objekts, das Sie steuern möchten (in meinem Fall ist es eine Kapsel), setzen Sie einen Collider, damit er nicht durch die Texturen fällt.
+das Skript beschreibt, welche Zeile für was zuständig ist, wenn Sie plötzlich etwas ändern möchten.
+
+2. Bewegen Sie die FPScamera.cs-Skript an die Kamera und verschieben Sie es in das Player-Modell.
+
+3. Erstellen Sie ein Boden-Tag und verschieben Sie das Tag auf den Boden, die Wände usw
+
+4. Testen Sie es. Du solltest dazu in der Lage sein. Wenn Sie einen Fehler haben, sollten Sie die Screenshots überprüfen und die Informationen erneut lesen.
