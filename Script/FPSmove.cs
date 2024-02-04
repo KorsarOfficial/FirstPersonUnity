@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FPSmove : MonoBehaviour
 {
-    [Header("Скорость перемещения персонажа")]
-    private float speed = 7f; // Настройте начальную скорость перемещения персонажа \\ Adjust the initial speed of the character's movement
-    public float runSpeed = 8.5f; // Настройте бег персонажа \\ Customize your character's running
-    public float jumpPower = 200f; // Настройте силу прыжка персонажа \\ Adjust your character's jump power
-    [Header("На земле ли игрок")]
-    public bool ground; // проверка коллизии персонажа. Находится ли он земле \\ checking for a character collision. Is it on the ground
+    [Header("Г‘ГЄГ®Г°Г®Г±ГІГј ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГї ГЇГҐГ°Г±Г®Г­Г Г¦Г ")]
+    private float speed = 7f; // Passen Sie die Anfangsgeschwindigkeit der Bewegung des Charakters an
+    public float runSpeed = 8.5f; // Passen Sie den Lauf Ihres Charakters an
+    public float jumpPower = 200f; // Passen Sie die Sprungkraft Ihres Charakters an
+    [Header("ГЌГ  Г§ГҐГ¬Г«ГҐ Г«ГЁ ГЁГЈГ°Г®ГЄ")]
+    public bool ground; // ГјberprГјfung auf eine Zeichenkollision. Ist es auf dem Boden
     public Rigidbody rb;
 
     void Update()
@@ -21,28 +21,28 @@ public class FPSmove : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            if(Input.GetKey(KeyCode.LeftShift)) // отвечает за бег \\ responsible for running
+            if(Input.GetKey(KeyCode.LeftShift)) // verantwortlich fГјr das Laufen
             {
                 transform.localPosition += transform.forward * runSpeed * Time.deltaTime;
             }
-            else // отвечает за перемещение вперёд \\ responsible for movement forward
+            else // verantwortlich fГјr die VorwГ¤rtsbewegung
             {
                 transform.localPosition += transform.forward * speed * Time.deltaTime;
             }
         }
-        if (Input.GetKey(KeyCode.S)) // перемещение назад \\ moving backwards
+        if (Input.GetKey(KeyCode.S)) // rГјckwГ¤rts bewegen
         {
             transform.localPosition += -transform.forward * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.A)) // перемещение влево \\ moving to the left
+        if (Input.GetKey(KeyCode.A)) // nach links bewegen
         {
             transform.localPosition += -transform.right * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.D)) // перемещение вправо \\ moving to the right
+        if (Input.GetKey(KeyCode.D)) // nach rechts bewegen
         {
             transform.localPosition += transform.right * speed * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.Space)) // прыжок \\ jump
+        if (Input.GetKeyDown(KeyCode.Space)) // Spring
         {
             if(ground == true)
             {
@@ -50,7 +50,7 @@ public class FPSmove : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter(Collision collision) // проверка коллизии Вход \\ checking the Input collision
+    private void OnCollisionEnter(Collision collision) // ГјberprГјfung der Eingabekollision
     {
         if (collision.gameObject.tag == "Ground")
         {
@@ -58,7 +58,7 @@ public class FPSmove : MonoBehaviour
         }
 
     }
-    private void OnCollisionExit(Collision collision) // проверка коллизии Выход \\ Collision check Output
+    private void OnCollisionExit(Collision collision) // Ausgabe der KollisionsprГјfung
     {
         if (collision.gameObject.tag == "Ground")
         {
